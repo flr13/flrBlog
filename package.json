@@ -1,0 +1,22 @@
+{
+  "name": "vuepress-frontend-tech-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A production-ready frontend technical blog powered by VuePress 2",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "read-md": "node read-md.js",
+    "serve": "npm run read-md && vue-cli-service serve"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.20",
+    "@vuepress/theme-default": "^2.0.0-rc.20",
+    "sass-embedded": "^1.98.0",
+    "vue": "^3.5.13",
+    "vuepress": "^2.0.0-rc.20"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.1"
+  }
+}
