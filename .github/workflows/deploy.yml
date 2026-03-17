@@ -3,11 +3,10 @@ name: Deploy VuePress site to GitHub Pages
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
@@ -34,3 +33,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
           enable_jekyll: false
+          publish_branch: gh-pages
+          force_orphan: true

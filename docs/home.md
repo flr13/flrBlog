@@ -160,11 +160,11 @@
 
   <h2 class="section-title">🔥 最新文章</h2>
   <ul>
-    <li><a href="/前端技术/Vue/Vue3.md">Vue3</a></li>
-    <li><a href="/前端技术/TypeScript/TypeScript.md">TypeScript</a></li>
-    <li><a href="/前端技术/CSS/CSS Grid 网格布局.md">CSS Grid 网格布局</a></li>
-    <li><a href="/前端技术/JavaScript/js注释使用说明.md">js注释使用说明</a></li>
-    <li><a href="/AI-机器学习/Transformer模型核心知识（Markdown版）.md">Transformer模型核心知识</a></li>
+    <li><RouterLink to="/前端技术/Vue/Vue3.html">Vue3</RouterLink></li>
+    <li><RouterLink to="/前端技术/TypeScript/TypeScript.html">TypeScript</RouterLink></li>
+    <li><RouterLink to="/前端技术/CSS/CSSGrid网格布局.html">CSS Grid 网格布局</RouterLink></li>
+    <li><RouterLink to="/前端技术/JavaScript/js注释使用说明.html">js注释使用说明</RouterLink></li>
+    <li><RouterLink to="/AI-机器学习/Transformer模型核心知识（Markdown版）.html">Transformer模型核心知识</RouterLink></li>
   </ul>
 
   <h2 class="section-title">🎯 技术分类</h2>

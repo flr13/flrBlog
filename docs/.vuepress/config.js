@@ -108,7 +108,7 @@ export default defineUserConfig({
           text: 'Vue',
           children: [
             '/前端技术/Vue/',
-            { text: 'Vue3', link: '/前端技术/Vue/Vue3.md' },
+            { text: 'Vue3', link: '/前端技术/Vue/Vue3.html' },
             { text: 'cascader属性', link: '/前端技术/Vue/cascader属性.md' },
             { text: 'dialog', link: '/前端技术/Vue/dialog.md' },
             { text: 'el-cascader组件使用说明', link: '/前端技术/Vue/el-cascader组件使用说明.md' },
