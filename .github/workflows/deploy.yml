@@ -2,7 +2,7 @@ name: Deploy VuePress site to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
   contents: write
@@ -33,3 +33,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
+          enable_jekyll: false

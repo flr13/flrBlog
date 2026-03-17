@@ -7,9 +7,8 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'FLR技术博客',
   description: '热爱编程分享的前端开发',
-  base: '/',
-  // 配置首页路径
-  dest: './dist',
+  // GitHub Pages (project site) needs repo name as base
+  base: '/flrBlog/',
   // 自定义404页面
   notFound: '/404.html',
   head: [

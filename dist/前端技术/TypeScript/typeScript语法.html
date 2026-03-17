@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.26" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <meta name="theme-color" content="#3eaf7c"><meta name="keywords" content="前端,VuePress,Vue,React,TypeScript,性能优化,工程化"><meta name="author" content="Jessica Ortiz"><title>TypeScript 文档 | FLR技术博客</title><meta name="description" content="热爱编程分享的前端开发">
+    <link rel="preload" href="/assets/style-CMKjPLn_.css" as="style"><link rel="stylesheet" href="/assets/style-CMKjPLn_.css">
+    <link rel="modulepreload" href="/assets/app-6Yjp8K1A.js"><link rel="modulepreload" href="/assets/typeScript语法.html-D6AXrsZT.js">
+    <link rel="prefetch" href="/assets/about.html-BxMusGvF.js" as="script"><link rel="prefetch" href="/assets/home.html-Crs3PsVu.js" as="script"><link rel="prefetch" href="/assets/index.html-MnC2-6SV.js" as="script"><link rel="prefetch" href="/assets/Agents核心笔记（可编辑版）.html-CPVmygqD.js" as="script"><link rel="prefetch" href="/assets/Agent决策流程.html-CLxHGn84.js" as="script"><link rel="prefetch" href="/assets/Coze.html-7rgEqqEs.js" as="script"><link rel="prefetch" href="/assets/RAG技术选型与搭建指南.html-C76vsOS3.js" as="script"><link rel="prefetch" href="/assets/index.html-P1yHmJpG.js" as="script"><link rel="prefetch" href="/assets/Transformer模型核心知识（Markdown版）.html-gb9I9ZaO.js" as="script"><link rel="prefetch" href="/assets/deploy.html-CPagnVj5.js" as="script"><link rel="prefetch" href="/assets/index.html-Dorc6DRa.js" as="script"><link rel="prefetch" href="/assets/writing.html-UAlZe4fm.js" as="script"><link rel="prefetch" href="/assets/javascript-event-loop.html-C1fOGayo.js" as="script"><link rel="prefetch" href="/assets/react-performance-checklist.html-BntoqObC.js" as="script"><link rel="prefetch" href="/assets/index.html-94HxM5fp.js" as="script"><link rel="prefetch" href="/assets/typescript-utility-types.html-gG5SEwmA.js" as="script"><link rel="prefetch" href="/assets/vite-vs-webpack.html-BsqGfNM-.js" as="script"><link rel="prefetch" href="/assets/vue3-responsive-system.html-C2Kv6JD1.js" as="script"><link rel="prefetch" href="/assets/Python零基础入门核心教程（MD版）.html-DbjwAvdQ.js" as="script"><link rel="prefetch" href="/assets/PytPython零基础入门核心教程（MD版）.html-CIgWKtCq.js" as="script"><link rel="prefetch" href="/assets/q_a0212.html-DgChQVTa.js" as="script"><link rel="prefetch" href="/assets/index.html-qjE2UpQZ.js" as="script"><link rel="prefetch" href="/assets/review.html-BIdfRg4c.js" as="script"><link rel="prefetch" href="/assets/SEE协议.html-Dw98neTR.js" as="script"><link rel="prefetch" href="/assets/XQS.html-zP_4dWGG.js" as="script"><link rel="prefetch" href="/assets/🚗自动挡科目二完整操作流程与点位笔记（C2）copy.html-YcfXTiHh.js" as="script"><link rel="prefetch" href="/assets/index.html-CpX6HQeL.js" as="script"><link rel="prefetch" href="/assets/Docker.html-B8Dws-Bg.js" as="script"><link rel="prefetch" href="/assets/K8S.html-BdaDFbzv.js" as="script"><link rel="prefetch" href="/assets/Microfront-end.html-DYdp8nMh.js" as="script"><link rel="prefetch" href="/assets/Nginx.html-Cm6SvPmx.js" as="script"><link rel="prefetch" href="/assets/index.html-DpgRX9T3.js" as="script"><link rel="prefetch" href="/assets/《40分钟的Docker实战攻略》学习笔记.html-Dn_nJ5Ah.js" as="script"><link rel="prefetch" href="/assets/CSSGrid网格布局.html-Bfoqha0F.js" as="script"><link rel="prefetch" href="/assets/CSS常见布局和样式.html-DBuiwkby.js" as="script"><link rel="prefetch" href="/assets/Flex布局.html-C2rPeY1Y.js" as="script"><link rel="prefetch" href="/assets/index.html-_2bmgATA.js" as="script"><link rel="prefetch" href="/assets/Sass教程.html-BhWxvabE.js" as="script"><link rel="prefetch" href="/assets/asynawait.html-3RcRQQ6F.js" as="script"><link rel="prefetch" href="/assets/fatch.html-DhKFaU2N.js" as="script"><link rel="prefetch" href="/assets/js注释使用说明.html-Dm2Z6JEO.js" as="script"><link rel="prefetch" href="/assets/js运算符及其优先级.html-C80heCpm.js" as="script"><link rel="prefetch" href="/assets/map和set的深度解析.html-6ByYUq81.js" as="script"><link rel="prefetch" href="/assets/index.html-DjOsmIta.js" as="script"><link rel="prefetch" href="/assets/webSorket.html-c-mkLsrD.js" as="script"><link rel="prefetch" href="/assets/index.html-CuCzcALx.js" as="script"><link rel="prefetch" href="/assets/TypeScript.html-CTCcsTah.js" as="script"><link rel="prefetch" href="/assets/cascader属性.html-vehwRYMl.js" as="script"><link rel="prefetch" href="/assets/dialog.html-DQgA8_NI.js" as="script"><link rel="prefetch" href="/assets/el-cascader组件使用说明.html-CWEYq-6N.js" as="script"><link rel="prefetch" href="/assets/mixins.html-Babi5CCy.js" as="script"><link rel="prefetch" href="/assets/index.html-Bo7ryri-.js" as="script"><link rel="prefetch" href="/assets/solt插槽.html-Bxunqthp.js" as="script"><link rel="prefetch" href="/assets/Vue3.html-BqWhfKfh.js" as="script"><link rel="prefetch" href="/assets/vuex状态管理.html-D5w79y0C.js" as="script"><link rel="prefetch" href="/assets/vue_form_add.html-B8z4TlBw.js" as="script"><link rel="prefetch" href="/assets/vue有关的notes.html-B4zQSJgz.js" as="script"><link rel="prefetch" href="/assets/vue父子组件通信.html-CLSl4oWP.js" as="script"><link rel="prefetch" href="/assets/vue的Prop用法.html-BDbT9kfh.js" as="script"><link rel="prefetch" href="/assets/vue通信方式.html-Bo1dpdxe.js" as="script"><link rel="prefetch" href="/assets/组件类型.html-9Mal4unz.js" as="script"><link rel="prefetch" href="/assets/HTML转MD-Tool.html-C6s1dIx3.js" as="script"><link rel="prefetch" href="/assets/iFrame基本知识及其跨域问题.html-BlgUV1YF.js" as="script"><link rel="prefetch" href="/assets/iframe跨域解决方案.html-D8DsJpIp.js" as="script"><link rel="prefetch" href="/assets/index.html-CtH1Tokc.js" as="script"><link rel="prefetch" href="/assets/ui自动化测试示例.html-JQwsjlwE.js" as="script"><link rel="prefetch" href="/assets/babel配置.html-BxYlhkQu.js" as="script"><link rel="prefetch" href="/assets/npm问题.html-D9koHZE-.js" as="script"><link rel="prefetch" href="/assets/nvm安装配置.html-BwogljTu.js" as="script"><link rel="prefetch" href="/assets/qiankun.html-Bzq7Q-Va.js" as="script"><link rel="prefetch" href="/assets/index.html-v8fpE3QQ.js" as="script"><link rel="prefetch" href="/assets/yarnlink.html-D5Ww69Na.js" as="script"><link rel="prefetch" href="/assets/yarnlinkcopy.html-Ba5c64an.js" as="script"><link rel="prefetch" href="/assets/404.html-CW1pZiIw.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><img class="vp-site-logo" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=FLR%20technology%20blog%20logo%20green%20modern%20clean%20design%20tech%20theme&amp;image_size=square" alt="FLR技术博客"><span class="vp-site-name vp-hide-mobile" aria-hidden="true">FLR技术博客</span></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/home.html" aria-label="首页"><!--[--><!--[--><!--]--><!--]-->首页<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><div class="vp-navbar-dropdown-wrapper"><button class="vp-navbar-dropdown-title" type="button" aria-label="前端技术"><span class="title">前端技术</span><span class="arrow down"></span></button><button class="vp-navbar-dropdown-title-mobile" type="button" aria-label="前端技术"><span class="title">前端技术</span><span class="right arrow"></span></button><ul class="vp-navbar-dropdown" style="display:none;"><!--[--><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/CSS/" aria-label="CSS"><!--[--><!--[--><!--]--><!--]-->CSS<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" aria-label="JavaScript"><!--[--><!--[--><!--]--><!--]-->JavaScript<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link route-link-active auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/" aria-label="TypeScript"><!--[--><!--[--><!--]--><!--]-->TypeScript<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Vue/" aria-label="Vue"><!--[--><!--[--><!--]--><!--]-->Vue<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" aria-label="工程化"><!--[--><!--[--><!--]--><!--]-->工程化<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%85%B6%E4%BB%96/" aria-label="其他"><!--[--><!--[--><!--]--><!--]-->其他<!--[--><!--[--><!--]--><!--]--></a></li><!--]--></ul></div></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/%E5%90%8E%E7%AB%AF-DevOps/" aria-label="后端-DevOps"><!--[--><!--[--><!--]--><!--]-->后端-DevOps<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AI-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" aria-label="AI-机器学习"><!--[--><!--[--><!--]--><!--]-->AI-机器学习<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/%E5%85%B6%E4%BB%96/" aria-label="其他"><!--[--><!--[--><!--]--><!--]-->其他<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/guide/" aria-label="指南"><!--[--><!--[--><!--]--><!--]-->指南<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/about.html" aria-label="关于"><!--[--><!--[--><!--]--><!--]-->关于<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/flr13/flrBlog" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/home.html" aria-label="首页"><!--[--><!--[--><!--]--><!--]-->首页<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><div class="vp-navbar-dropdown-wrapper"><button class="vp-navbar-dropdown-title" type="button" aria-label="前端技术"><span class="title">前端技术</span><span class="arrow down"></span></button><button class="vp-navbar-dropdown-title-mobile" type="button" aria-label="前端技术"><span class="title">前端技术</span><span class="right arrow"></span></button><ul class="vp-navbar-dropdown" style="display:none;"><!--[--><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/CSS/" aria-label="CSS"><!--[--><!--[--><!--]--><!--]-->CSS<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" aria-label="JavaScript"><!--[--><!--[--><!--]--><!--]-->JavaScript<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link route-link-active auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/" aria-label="TypeScript"><!--[--><!--[--><!--]--><!--]-->TypeScript<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Vue/" aria-label="Vue"><!--[--><!--[--><!--]--><!--]-->Vue<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" aria-label="工程化"><!--[--><!--[--><!--]--><!--]-->工程化<!--[--><!--[--><!--]--><!--]--></a></li><li class="vp-navbar-dropdown-item"><a class="route-link auto-link" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%85%B6%E4%BB%96/" aria-label="其他"><!--[--><!--[--><!--]--><!--]-->其他<!--[--><!--[--><!--]--><!--]--></a></li><!--]--></ul></div></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/%E5%90%8E%E7%AB%AF-DevOps/" aria-label="后端-DevOps"><!--[--><!--[--><!--]--><!--]-->后端-DevOps<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AI-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" aria-label="AI-机器学习"><!--[--><!--[--><!--]--><!--]-->AI-机器学习<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/%E5%85%B6%E4%BB%96/" aria-label="其他"><!--[--><!--[--><!--]--><!--]-->其他<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/guide/" aria-label="指南"><!--[--><!--[--><!--]--><!--]-->指南<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/about.html" aria-label="关于"><!--[--><!--[--><!--]--><!--]-->关于<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/flr13/flrBlog" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading active">TypeScript <!----></p><ul class="vp-sidebar-children" style=""><!--[--><li><a class="route-link route-link-active auto-link vp-sidebar-item" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/" aria-label="TypeScript"><!--[--><!--[--><!--]--><!--]-->TypeScript<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/TypeScript.html" aria-label="TypeScript"><!--[--><!--[--><!--]--><!--]-->TypeScript<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link route-link-active auto-link vp-sidebar-item active" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/typeScript%E8%AF%AD%E6%B3%95.html" aria-label="typeScript语法"><!--[--><!--[--><!--]--><!--]-->typeScript语法<!--[--><!--[--><!--]--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div id="content"><h1 id="typescript-文档" tabindex="-1"><a class="header-anchor" href="#typescript-文档"><span>TypeScript 文档</span></a></h1><h2 id="_1-简介" tabindex="-1"><a class="header-anchor" href="#_1-简介"><span>1. 简介</span></a></h2><p>TypeScript 是 JavaScript 的超集，遵循最新的 ES6、ES5 规范。TypeScript 扩展了 JavaScript 的语法，对类型进行了约束和限制。</p><p><strong>TypeScript 的优势</strong></p><ol><li>支持类型检查，编译时运行，减少 bug 和类型错误</li><li>提供更好的语法提示</li><li>方便代码重构</li></ol><h2 id="_2-下载安装" tabindex="-1"><a class="header-anchor" href="#_2-下载安装"><span>2. 下载安装</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">npm install -g typescript   # 全局安装</span>
+<span class="line">tsc -v                     # 查看版本</span>
+<span class="line">tsc xxx.ts                 # 生成 js 文件</span>
+<span class="line">node xxx.js                # 运行 js 文件</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_3-typescript-的类型" tabindex="-1"><a class="header-anchor" href="#_3-typescript-的类型"><span>3. TypeScript 的类型</span></a></h2><h3 id="_3-1-类型注解" tabindex="-1"><a class="header-anchor" href="#_3-1-类型注解"><span>3.1 类型注解</span></a></h3><p><strong>语法格式</strong>：<code>let 变量名: 变量类型 = 初始化值;</code></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">let num: number = 12</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h3 id="_3-2-类型系统" tabindex="-1"><a class="header-anchor" href="#_3-2-类型系统"><span>3.2 类型系统</span></a></h3><h4 id="_1-原始类型" tabindex="-1"><a class="header-anchor" href="#_1-原始类型"><span>1. 原始类型</span></a></h4><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">let num: number = 90</span>
+<span class="line">let str: string = &#39;123&#39;</span>
+<span class="line">let bool: boolean = true</span>
+<span class="line">let n: null = null</span>
+<span class="line">let unde: undefined = undefined</span>
+<span class="line">let symbol: symbol = Symbol()</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_2-数组类型" tabindex="-1"><a class="header-anchor" href="#_2-数组类型"><span>2. 数组类型</span></a></h4><p><strong>两种写法：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// 写法一：元素类型[]</span>
+<span class="line">let nums: number[] = [1, 2, 3]</span>
+<span class="line">let strs: string[] = [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</span>
+<span class="line"></span>
+<span class="line">// 写法二：Array&lt;元素类型&gt;</span>
+<span class="line">let numbers: Array&lt;number&gt; = [1, 2, 3]</span>
+<span class="line">let strings: Array&lt;string&gt; = [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_3-元组类型" tabindex="-1"><a class="header-anchor" href="#_3-元组类型"><span>3. 元组类型</span></a></h4><p><strong>特性：</strong></p><ul><li>解构赋值</li><li><code>?</code>表示当前元素可选（可有可无）</li><li><code>...</code>表示剩余元素（最后一个元素任意长度）</li><li><code>readonly</code>表示只读元素</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">let tuple1: [number, string] = [1, &#39;232&#39;]</span>
+<span class="line">let tuple2: [string, number?] = [&#39;hello&#39;]  // 第二个元素可选</span>
+<span class="line">let tuple3: [string, ...number[]] = [&#39;hello&#39;, 1, 2, 3]  // 剩余参数</span>
+<span class="line">let tuple4: readonly [number, string] = [1, &#39;test&#39;]  // 只读元组</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_4-枚举类型" tabindex="-1"><a class="header-anchor" href="#_4-枚举类型"><span>4. 枚举类型</span></a></h4><p><strong>定义语法：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">enum 枚举名 {</span>
+<span class="line">  标识符[= 整型常数/字符串],</span>
+<span class="line">  标识符[= 整型常数/字符串],</span>
+<span class="line">  ...</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">enum Flag {</span>
+<span class="line">  success,</span>
+<span class="line">  error,</span>
+<span class="line">  overtime</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">let s: Flag = Flag.overtime</span>
+<span class="line">console.log(s)  // 输出: 2</span>
+<span class="line"></span>
+<span class="line">// 字符串枚举</span>
+<span class="line">enum Direction {</span>
+<span class="line">  Up = &quot;UP&quot;,</span>
+<span class="line">  Down = &quot;DOWN&quot;,</span>
+<span class="line">  Left = &quot;LEFT&quot;,</span>
+<span class="line">  Right = &quot;RIGHT&quot;</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_5-any-类型" tabindex="-1"><a class="header-anchor" href="#_5-any-类型"><span>5. any 类型</span></a></h4><p>TypeScript 中的 any 类型表示任意数据类型。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">let dynamicValue: any = &#39;Hello&#39;</span>
+<span class="line">dynamicValue = 42           // ✅ 可以重新赋值为数字</span>
+<span class="line">dynamicValue = true         // ✅ 可以重新赋值为布尔值</span>
+<span class="line">dynamicValue = [1, 2, 3]    // ✅ 可以重新赋值为数组</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_6-void-类型" tabindex="-1"><a class="header-anchor" href="#_6-void-类型"><span>6. void 类型</span></a></h4><p>void 类型表示没有任何类型，通常用于函数返回值。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">function logMessage(): void {</span>
+<span class="line">  console.log(&#39;这是一个函数&#39;)</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">function a(): void {</span>
+<span class="line">  console.log(&#39;这是一个没有返回值的函数&#39;)</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_7-never-类型" tabindex="-1"><a class="header-anchor" href="#_7-never-类型"><span>7. never 类型</span></a></h4><p>never 类型表示那些永远不存在的值的类型。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// 抛出异常的函数</span>
+<span class="line">function error(message: string): never {</span>
+<span class="line">  throw new Error(message)</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 无限循环的函数</span>
+<span class="line">function infiniteLoop(): never {</span>
+<span class="line">  while (true) {</span>
+<span class="line">    // 无限循环</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_8-联合类型" tabindex="-1"><a class="header-anchor" href="#_8-联合类型"><span>8. 联合类型</span></a></h4><p>使用 <code>|</code>运算符组合多个类型。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">let value: number | undefined | string = &#39;hello&#39;</span>
+<span class="line">value = 42        // ✅</span>
+<span class="line">value = undefined // ✅</span>
+<span class="line">value = &#39;world&#39;   // ✅</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_9-类型别名-type" tabindex="-1"><a class="header-anchor" href="#_9-类型别名-type"><span>9. 类型别名（type）</span></a></h4><p>使用 <code>type</code>关键字创建类型别名。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">type StringOrNumber = string | number</span>
+<span class="line">type User = {</span>
+<span class="line">  id: number</span>
+<span class="line">  name: string</span>
+<span class="line">  email: string</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">let userId: StringOrNumber = 123</span>
+<span class="line">let user: User = {</span>
+<span class="line">  id: 1,</span>
+<span class="line">  name: &#39;张三&#39;,</span>
+<span class="line">  email: &#39;zhangsan@example.com&#39;</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_10-函数类型" tabindex="-1"><a class="header-anchor" href="#_10-函数类型"><span>10. 函数类型</span></a></h4><p>函数的类型指的是函数参数和返回值的类型。</p><p><strong>普通函数：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">function add(a: number, b: number = 0): number {</span>
+<span class="line">  return a + b</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">function greet(name: string): void {</span>
+<span class="line">  console.log(&#39;Hello&#39;, name)</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>箭头函数：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">const multiply = (a: number, b: number = 1): number =&gt; {</span>
+<span class="line">  return a * b</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const sayHello = (name: string): void =&gt; {</span>
+<span class="line">  console.log(&#39;Hello&#39;, name)</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>可选参数和默认参数：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">function buildName(firstName: string, lastName?: string): string {</span>
+<span class="line">  return lastName ? `${firstName} ${lastName}` : firstName</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">function createUser(name: string, age: number = 18): void {</span>
+<span class="line">  console.log(`Name: ${name}, Age: ${age}`)</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_11-接口类型-interface" tabindex="-1"><a class="header-anchor" href="#_11-接口类型-interface"><span>11. 接口类型（interface）</span></a></h4><p>使用 <code>interface</code>关键字来声明接口。</p><p><strong>基本用法：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">interface IPerson {</span>
+<span class="line">  name: string</span>
+<span class="line">  age: number</span>
+<span class="line">  email?: string  // 可选属性</span>
+<span class="line">  readonly id: number  // 只读属性</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const user1: IPerson = {</span>
+<span class="line">  id: 1,</span>
+<span class="line">  name: &#39;张三&#39;,</span>
+<span class="line">  age: 20</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 使用 type 的等价写法</span>
+<span class="line">type Person = {</span>
+<span class="line">  name: string</span>
+<span class="line">  age: number</span>
+<span class="line">  email?: string</span>
+<span class="line">  readonly id: number</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const user2: Person = {</span>
+<span class="line">  id: 2,</span>
+<span class="line">  name: &#39;李四&#39;,</span>
+<span class="line">  age: 25</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>接口继承：</strong></p><p>使用 <code>extends</code>关键字实现接口继承。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">interface Point2D {</span>
+<span class="line">  x: number</span>
+<span class="line">  y: number</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 继承 Point2D</span>
+<span class="line">interface Point3D extends Point2D {</span>
+<span class="line">  z: number</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const point: Point3D = {</span>
+<span class="line">  x: 1,</span>
+<span class="line">  y: 2,</span>
+<span class="line">  z: 3</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 多继承</span>
+<span class="line">interface Animal {</span>
+<span class="line">  name: string</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">interface Mammal {</span>
+<span class="line">  hasFur: boolean</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">interface Dog extends Animal, Mammal {</span>
+<span class="line">  breed: string</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const myDog: Dog = {</span>
+<span class="line">  name: &#39;Buddy&#39;,</span>
+<span class="line">  hasFur: true,</span>
+<span class="line">  breed: &#39;Golden Retriever&#39;</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_12-类型断言" tabindex="-1"><a class="header-anchor" href="#_12-类型断言"><span>12. 类型断言</span></a></h4><p>使用 <code>as</code>关键字进行类型断言。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// 方式一：as 语法</span>
+<span class="line">let someValue: any = &#39;this is a string&#39;</span>
+<span class="line">let strLength: number = (someValue as string).length</span>
+<span class="line"></span>
+<span class="line">// 方式二：尖括号语法（在 JSX 中不能使用）</span>
+<span class="line">let strLength2: number = (&lt;string&gt;someValue).length</span>
+<span class="line"></span>
+<span class="line">// 非空断言</span>
+<span class="line">function liveDangerously(x?: number | null) {</span>
+<span class="line">  console.log(x!.toFixed())  // 确定 x 不为 null/undefined</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_13-类-class" tabindex="-1"><a class="header-anchor" href="#_13-类-class"><span>13. 类（class）</span></a></h4><p>TypeScript 增强了 JavaScript 的类语法，添加了类型注解和访问修饰符。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">class Person {</span>
+<span class="line">  // 成员变量</span>
+<span class="line">  public name: string</span>
+<span class="line">  private age: number</span>
+<span class="line">  protected email: string</span>
+<span class="line">  readonly id: number</span>
+<span class="line">  </span>
+<span class="line">  // 静态属性</span>
+<span class="line">  static species: string = &#39;Homo sapiens&#39;</span>
+<span class="line">  </span>
+<span class="line">  // 构造函数</span>
+<span class="line">  constructor(name: string, age: number, email: string) {</span>
+<span class="line">    this.name = name</span>
+<span class="line">    this.age = age</span>
+<span class="line">    this.email = email</span>
+<span class="line">    this.id = Date.now()</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  // 方法</span>
+<span class="line">  public greet(): string {</span>
+<span class="line">    return `Hello, my name is ${this.name}`</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  // 私有方法</span>
+<span class="line">  private getAge(): number {</span>
+<span class="line">    return this.age</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  // 静态方法</span>
+<span class="line">  static describe(): string {</span>
+<span class="line">    return `This is a ${this.species}`</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  // 存取器（getter/setter）</span>
+<span class="line">  get fullInfo(): string {</span>
+<span class="line">    return `${this.name} (${this.age}) - ${this.email}`</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  set updateEmail(newEmail: string) {</span>
+<span class="line">    this.email = newEmail</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 继承</span>
+<span class="line">class Employee extends Person {</span>
+<span class="line">  private employeeId: number</span>
+<span class="line">  </span>
+<span class="line">  constructor(name: string, age: number, email: string, employeeId: number) {</span>
+<span class="line">    super(name, age, email)</span>
+<span class="line">    this.employeeId = employeeId</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  // 重写方法</span>
+<span class="line">  public greet(): string {</span>
+<span class="line">    return `Hello, I&#39;m employee ${this.employeeId}, my name is ${this.name}`</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_14-泛型" tabindex="-1"><a class="header-anchor" href="#_14-泛型"><span>14. 泛型</span></a></h4><p>泛型用于创建可重用的组件，支持多种类型的数据。</p><p><strong>基本泛型函数：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">function identity&lt;T&gt;(value: T): T {</span>
+<span class="line">  return value</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 使用</span>
+<span class="line">let output1 = identity&lt;string&gt;(&#39;hello&#39;)</span>
+<span class="line">let output2 = identity&lt;number&gt;(42)</span>
+<span class="line">let output3 = identity(&#39;world&#39;)  // 类型推断</span>
+<span class="line"></span>
+<span class="line">// 多个泛型参数</span>
+<span class="line">function pair&lt;T, U&gt;(first: T, second: U): [T, U] {</span>
+<span class="line">  return [first, second]</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>泛型约束：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">interface Lengthwise {</span>
+<span class="line">  length: number</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {</span>
+<span class="line">  console.log(arg.length)</span>
+<span class="line">  return arg</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 在泛型约束中使用类型参数</span>
+<span class="line">function getProperty&lt;T, K extends keyof T&gt;(obj: T, key: K): T[K] {</span>
+<span class="line">  return obj[key]</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">const person = { name: &#39;John&#39;, age: 30 }</span>
+<span class="line">getProperty(person, &#39;name&#39;)  // ✅</span>
+<span class="line">// getProperty(person, &#39;gender&#39;)  // ❌ 错误</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>泛型接口：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">interface GenericIdentityFn&lt;T&gt; {</span>
+<span class="line">  (arg: T): T</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">function identity&lt;T&gt;(arg: T): T {</span>
+<span class="line">  return arg</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">let myIdentity: GenericIdentityFn&lt;number&gt; = identity</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>泛型类：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">class GenericNumber&lt;T&gt; {</span>
+<span class="line">  zeroValue: T</span>
+<span class="line">  add: (x: T, y: T) =&gt; T</span>
+<span class="line">  </span>
+<span class="line">  constructor(zeroValue: T, add: (x: T, y: T) =&gt; T) {</span>
+<span class="line">    this.zeroValue = zeroValue</span>
+<span class="line">    this.add = add</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 使用</span>
+<span class="line">let myGenericNumber = new GenericNumber&lt;number&gt;(0, (x, y) =&gt; x + y)</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_4-实用技巧和最佳实践" tabindex="-1"><a class="header-anchor" href="#_4-实用技巧和最佳实践"><span>4. 实用技巧和最佳实践</span></a></h2><h3 id="类型推断" tabindex="-1"><a class="header-anchor" href="#类型推断"><span>类型推断</span></a></h3><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// TypeScript 可以自动推断类型</span>
+<span class="line">let message = &#39;Hello&#39;  // 推断为 string 类型</span>
+<span class="line">let count = 42        // 推断为 number 类型</span>
+<span class="line"></span>
+<span class="line">// 使用 const 断言</span>
+<span class="line">const config = {</span>
+<span class="line">  api: &quot;https://api.example.com&quot;,</span>
+<span class="line">  timeout: 5000</span>
+<span class="line">} as const  // 所有属性变为 readonly</span>
+<span class="line"></span>
+<span class="line">// 使用 satisfies 操作符（TypeScript 4.9+）</span>
+<span class="line">const theme = {</span>
+<span class="line">  primary: &quot;#1890ff&quot;,</span>
+<span class="line">  secondary: &quot;#52c41a&quot;</span>
+<span class="line">} satisfies Record&lt;string, string&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="实用类型工具" tabindex="-1"><a class="header-anchor" href="#实用类型工具"><span>实用类型工具</span></a></h3><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// 内置实用类型</span>
+<span class="line">interface User {</span>
+<span class="line">  id: number</span>
+<span class="line">  name: string</span>
+<span class="line">  email: string</span>
+<span class="line">  age: number</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// Partial - 所有属性变为可选</span>
+<span class="line">type PartialUser = Partial&lt;User&gt;</span>
+<span class="line"></span>
+<span class="line">// Readonly - 所有属性变为只读</span>
+<span class="line">type ReadonlyUser = Readonly&lt;User&gt;</span>
+<span class="line"></span>
+<span class="line">// Pick - 选择部分属性</span>
+<span class="line">type UserPreview = Pick&lt;User, &quot;id&quot; | &quot;name&quot;&gt;</span>
+<span class="line"></span>
+<span class="line">// Omit - 排除部分属性</span>
+<span class="line">type UserWithoutEmail = Omit&lt;User, &quot;email&quot;&gt;</span>
+<span class="line"></span>
+<span class="line">// Record - 创建对象类型</span>
+<span class="line">type UserMap = Record&lt;string, User&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="类型守卫" tabindex="-1"><a class="header-anchor" href="#类型守卫"><span>类型守卫</span></a></h3><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">// typeof 类型守卫</span>
+<span class="line">function padLeft(value: string, padding: string | number) {</span>
+<span class="line">  if (typeof padding === &quot;number&quot;) {</span>
+<span class="line">    return Array(padding + 1).join(&quot; &quot;) + value</span>
+<span class="line">  }</span>
+<span class="line">  return padding + value</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// instanceof 类型守卫</span>
+<span class="line">class Bird { fly() {} }</span>
+<span class="line">class Fish { swim() {} }</span>
+<span class="line">function move(pet: Bird | Fish) {</span>
+<span class="line">  if (pet instanceof Bird) {</span>
+<span class="line">    pet.fly()</span>
+<span class="line">  } else {</span>
+<span class="line">    pet.swim()</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line">// 自定义类型守卫</span>
+<span class="line">function isString(value: any): value is string {</span>
+<span class="line">  return typeof value === &#39;string&#39;</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_5-总结" tabindex="-1"><a class="header-anchor" href="#_5-总结"><span>5. 总结</span></a></h2><p>TypeScript 通过强大的类型系统为 JavaScript 开发带来了以下优势：</p><ol><li><strong>类型安全</strong>：编译时类型检查，减少运行时错误</li><li><strong>更好的开发体验</strong>：丰富的语法提示和自动补全</li><li><strong>代码可维护性</strong>：清晰的类型定义使代码更易理解和重构</li><li><strong>渐进式采用</strong>：可以逐步将 JavaScript 项目迁移到 TypeScript</li></ol><p>掌握 TypeScript 的类型系统是有效使用 TypeScript 的关键，建议在实际项目中逐步应用这些概念，从简单的类型注解开始，逐步使用更高级的类型特性。</p></div><!--[--><!--]--></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">最近更新: </span><time class="meta-item-info" datetime="2026-03-13T09:41:13.000Z" data-allow-mismatch>2026/3/13 17:41</time></div><!----></div></footer><nav class="vp-page-nav" aria-label="page navigation"><a class="route-link auto-link prev" href="/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/TypeScript/TypeScript.html" aria-label="TypeScript"><!--[--><div class="hint"><span class="arrow left"></span> Prev</div><div class="link"><span class="external-link">TypeScript</span></div><!--]--></a><!----></nav><!--[--><!--]--></main><!--]--></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-6Yjp8K1A.js" defer></script>
+  </body>
+</html>
