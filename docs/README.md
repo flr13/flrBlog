@@ -147,20 +147,21 @@ html, body {
     <div class="welcome-content">
         <h1 class="welcome-title">欢迎来到 FLR技术博客</h1>
         <p class="welcome-subtitle">热爱编程分享的前端开发技术平台</p>
-        <button class="enter-btn" onclick="enterBlog()">点击进入</button>
+        <button class="enter-btn" @click="enterBlog">点击进入</button>
     </div>
 </div>
 
-<script>
-// 点击进入博客首页
-window.enterBlog = function() {
-    // 添加过渡效果
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        // 跳转到博客首页
-        window.location.href = '/home';
-    }, 100);
-};
+<script setup>
+import { withBase } from '@vuepress/client'
+
+const enterBlog = () => {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return
+
+  document.body.style.opacity = '0'
+  document.body.style.transition = 'opacity 0.5s ease'
+
+  setTimeout(() => {
+    window.location.href = withBase('/home.html')
+  }, 100)
+}
 </script>

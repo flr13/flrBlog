@@ -29,7 +29,9 @@
 
 以上下天地布局为标准，粉红色是基座，只负责头部导航，绿色是挂载的整个子应用，点击头部导航可切换子应用
 
-![qiankun](docs/assets/layout.png)
+<!-- TODO: add image asset then restore
+![qiankun](./assets/layout.png)
+-->
 
 
 ## 什么是微前端
@@ -54,7 +56,9 @@
 
 QIANKUN 是基于 Single-SPA ，提供了更加开箱即用的 API （ single-spa + sandbox + import-html-entry ）
 
-![qiankun](docs/assets/qiankun.png)
+<!-- TODO: add image asset then restore
+![qiankun](./assets/qiankun.png)
+-->
 
 ### 主应用
 
@@ -91,7 +95,11 @@ microApps:[
 ]
 ```
 
-2、菜单管理中配置菜单信息，菜单url为"/对应子应用的activeRule/嵌入的子应用对应页面路由"，例如当前嵌入子应用egcip-dcpp-alarm-ui中的告警任务运行监控页面，新建菜单的信息如下图所示![qiankun](docs/assets/template-menu.png)
+2、菜单管理中配置菜单信息，菜单url为"/对应子应用的activeRule/嵌入的子应用对应页面路由"，例如当前嵌入子应用egcip-dcpp-alarm-ui中的告警任务运行监控页面。
+
+<!-- TODO: add image asset then restore
+![qiankun](./assets/template-menu.png)
+-->
 
 ### 子应用
 
@@ -211,13 +219,19 @@ $ npm run build
 
 本地路由：存放于skeleton-ui页面的路由，即主应用中的页面，目前主要是在字典管理、系统管理下。
 
-* 在view文件夹中新建对应的组件页面，/utils/menu.js文件中配置path及component![qiankun](docs/assets/router.png)
+* 在view文件夹中新建对应的组件页面，/utils/menu.js文件中配置 path 及 component
+
+<!-- TODO: add image asset then restore
+![qiankun](./assets/router.png)
+-->
 
   
 
 * 菜单管理新增菜单，新增的菜单路径即为/utils/menu.js文件中配置path
 
-  ![qiankun](docs/assets/menu-add.png)
+<!-- TODO: add image asset then restore
+![qiankun](./assets/menu-add.png)
+-->
 
 
 

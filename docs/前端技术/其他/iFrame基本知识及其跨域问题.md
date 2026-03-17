@@ -59,7 +59,7 @@ https://blog.csdn.net/weixin_44733660/article/details/117048195?ops_request_misc
 
 出于安全考虑，默认在网页中，使用JS发送请求，请求的服务器和当前所在网页的服务器必须一样，**即两个请求地址的 协议、域名、端口必须一致。**
 
-Origin: < scheme > “/” <host> [ “:” < port > ],origin由用于访问它的URL的**scheme（协议）、port（端口）、host（IP或域名**）
+Origin: `scheme "://" host [ ":" port ]`，origin 由用于访问它的 URL 的 **scheme（协议）、port（端口）、host（IP 或域名）** 组成
 
 ```sh
 协议相同  http https

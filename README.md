@@ -26,3 +26,16 @@ npm run docs:build
 4. 在 GitHub Actions 中自动构建并发布 `gh-pages`
 
 项目已内置 `.github/workflows/deploy.yml`。
+
+### 本地一键部署（可选）
+
+如果你不想用 GitHub Actions，也可以用本地命令直接发布到 `gh-pages` 分支：
+
+```bash
+npm install
+npm run docs:deploy
+```
+
+说明：
+- 该命令会先执行 `docs:build`，再把 `docs/.vuepress/dist` 推送到 `gh-pages`。
+- 需要你本地 Git 已能正常 `push` 到仓库（HTTPS 或已配置 SSH Key）。

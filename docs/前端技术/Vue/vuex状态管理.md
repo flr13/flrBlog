@@ -41,7 +41,7 @@ export default new Vuex.Store({
 
  在vuex中state中定义数据，可以在任何组件中进行调用 
 
-1. 在标签中使用  {{ $store.state.全局数据名称 }}
+1. 在模板标签中使用：`{{ $store.state.全局数据名称 }}`
 
 2.  获取数据 ： this.$store.state.全局数据名称
 
