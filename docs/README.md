@@ -1,34 +1,18 @@
 
 
 <style>
-/* 全局重置，确保全屏无空白 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* 全局背景色和背景图片 */
-body {
+.welcome-page {
+    width: 100vw;
+    height: 100vh;
     background-color: #e8f4f8;
     background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-}
-
-/* 页面容器：100% 视口宽高 */
-.welcome-page {
-    width: 100vw;
-    height: 100vh;
-    background: #e8f4f8; /* 浅蓝背景 */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    overflow: hidden; /* 隐藏滚动条 */
     position: relative;
 }
 
@@ -85,61 +69,6 @@ body {
 .enter-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 22px rgba(0, 153, 255, 0.8);
-}
-
-/* 隐藏VuePress默认的导航和侧边栏 */
-.theme-default-content {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-/* 确保整个页面居中 */
-.page {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 隐藏VuePress默认的导航和侧边栏 */
-.navbar,
-.sidebar {
-    display: none !important;
-}
-
-/* 确保body和html完全居中 */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-/* 确保欢迎页面容器铺满屏幕 */
-.welcome-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-}
-
-/* 覆盖VuePress默认的容器样式 */
-.container {
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 确保没有任何默认的边距或内边距 */
-* {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
 }
 </style>
 
