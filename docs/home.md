@@ -20,11 +20,43 @@
     margin: 0;
     padding: 0;
   }
+
+  /* 只在首页隐藏头部导航栏和侧边栏 */
+  body[class*="home"] .vp-navbar,
+  body[class*="index"] .vp-navbar {
+    display: none !important;
+  }
+
+  body[class*="home"] .vp-sidebar,
+  body[class*="index"] .vp-sidebar {
+    display: none !important;
+  }
+
+  body[class*="home"] .vp-content,
+  body[class*="index"] .vp-content {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body[class*="home"] .vp-breadcrumb,
+  body[class*="index"] .vp-breadcrumb {
+    display: none !important;
+  }
+
+  body[class*="home"] .vp-page-footer,
+  body[class*="index"] .vp-page-footer {
+    display: none !important;
+  }
+
+  body[class*="home"] .vp-theme-container,
+  body[class*="index"] .vp-theme-container {
+    padding: 0 !important;
+  }
   
   .hero-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;

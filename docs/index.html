@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到 FLR技术博客</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 背景半透效果 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.15);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* 内容容器 */
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        /* 顶部 Logo 区 */
+        .logo-section {
+            margin-bottom: 48px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+        }
+
+        /* 中部欢迎区 */
+        .welcome-section {
+            margin-bottom: 64px;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin-bottom: 16px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* 按钮组 */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4ECDC4;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #3ABBA7;
+            transform: scale(1.03);
+            box-shadow: 0 6px 16px rgba(78, 205, 196, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: scale(1.03);
+        }
+
+        /* 底部导航区 */
+        .footer-section {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #4ECDC4;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4ECDC4;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #4ECDC4;
+            transform: scale(1.1);
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="logo-section">
+            <div class="logo">
+                <span class="logo-icon">🌊</span>
+                <span>FLR技术博客</span>
+            </div>
+        </div>
+        
+        <div class="welcome-section">
+            <h1 class="title">欢迎来到 FLR技术博客</h1>
+            <p class="subtitle">热爱编程分享的前端开发技术平台，致力于分享前端技术、工程实践和行业动态</p>
+            <div class="btn-group">
+                <a href="/flrBlog/home.html" class="btn btn-primary">进入博客</a>
+                <a href="#" class="btn btn-secondary">了解更多</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <div class="nav-links">
+                <a href="#">关于我</a>
+                <a href="/flrBlog/home.html">文章列表</a>
+                <a href="#">项目</a>
+                <a href="#">联系方式</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/flr13/flrBlog" target="_blank">🔗</a>
+                <a href="#">🐦</a>
+                <a href="#">📧</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // 视差滚动效果
+    if (typeof window !== 'undefined') {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            document.body.style.backgroundPositionY = `${scrollY * 0.5}px`;
+        });
+    }
+    </script>
+</body>
+</html>

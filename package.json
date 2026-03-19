@@ -7,7 +7,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
-    "read-md": "node read-md.js",
+    "read-md": "node scripts/read-md.js",
     "serve": "npm run read-md && vue-cli-service serve"
   },
   "devDependencies": {

@@ -1,4 +1,6 @@
-
+---
+sidebar: false
+---
 
 <style>
 .welcome-page {
@@ -69,6 +71,91 @@
 .enter-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 22px rgba(0, 153, 255, 0.8);
+}
+
+/* 确保没有默认的边距和内边距 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 隐藏VuePress默认的头部和侧边栏 */
+.vp-navbar,
+.vp-sidebar {
+    display: none !important;
+}
+
+/* 确保内容区域占满整个屏幕 */
+.vp-page {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+
+/* 确保所有可能的容器都没有边距和内边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 防止水平滚动 */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 确保VuePress的根容器也没有边距 */
+#app {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 确保内容容器没有边距 */
+.vp-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* 确保欢迎页面容器没有任何偏移 */
+.welcome-page {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    transform: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* 确保没有其他容器干扰 */
+.vp-layout,
+.vp-main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* 确保没有滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 确保移动端也没有空白 */
+@media (max-width: 768px) {
+    .welcome-page {
+        width: 100vw !important;
+        height: 100vh !important;
+    }
 }
 </style>
 
