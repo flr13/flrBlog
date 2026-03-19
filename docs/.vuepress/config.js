@@ -46,7 +46,7 @@ export default defineUserConfig({
     ],
     // 手动配置侧边栏，根据目录结构
     sidebar: {
-      // 首页
+      //欢迎页
       '/': false,
       // 前端技术
       '/前端技术/': [
