@@ -21,16 +21,7 @@
     padding: 0;
   }
 
-  /* 只在首页隐藏头部导航栏和侧边栏 */
-  body[class*="index"] .vp-navbar {
-    display: none !important;
-  }
-
-  body[class*="home"] .vp-sidebar,
-  body[class*="index"] .vp-sidebar {
-    display: none !important;
-  }
-
+  /* 调整首页布局 */
   body[class*="home"] .vp-content,
   body[class*="index"] .vp-content {
     max-width: 100% !important;
@@ -39,11 +30,6 @@
 
   body[class*="home"] .vp-breadcrumb,
   body[class*="index"] .vp-breadcrumb {
-    display: none !important;
-  }
-
-  body[class*="home"] .vp-page-footer,
-  body[class*="index"] .vp-page-footer {
     display: none !important;
   }
 
@@ -223,7 +209,7 @@
   <ul>
     <li><strong>GitHub</strong>：<a href="https://github.com/flr13/flrBlog" target="_blank">flr13/flrBlog</a></li>
     <li><strong>邮箱</strong>：flr13@qq.com</li>
-    <li><strong>微信</strong>：your-wechat-id</li>
+    <li><strong>微信</strong>：ibrightfree</li>
   </ul>
 
   <h2 class="section-title">📄 版权信息</h2>
