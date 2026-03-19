@@ -22,7 +22,6 @@
   }
 
   /* 只在首页隐藏头部导航栏和侧边栏 */
-  body[class*="home"] .vp-navbar,
   body[class*="index"] .vp-navbar {
     display: none !important;
   }
@@ -182,7 +181,7 @@
 </style>
 
 <div id="content" class="content-section">
-  <h2 class="section-title">📚 博客定位</h2>
+  <h2 class="section-title">📚 博客定位测试</h2>
   <ul>
     <li><strong>技术分享</strong>：前端工程师的技术笔记与实践经验</li>
     <li><strong>学习记录</strong>：Vue、React、TypeScript 等前端技术的学习心得</li>
