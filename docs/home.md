@@ -37,6 +37,12 @@
   body[class*="index"] .vp-theme-container {
     padding: 0 !important;
   }
+
+  /* 确保导航栏显示在最上层 */
+  body[class*="home"] .vp-navbar {
+    position: relative !important;
+    z-index: 1000 !important;
+  }
   
   .hero-container {
     position: relative;
