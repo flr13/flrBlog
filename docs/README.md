@@ -79,11 +79,6 @@ body {
     padding: 0;
 }
 
-/* 隐藏VuePress默认的头部和侧边栏 */
- body[class*="index"] .vp-navbar,
-.vp-sidebar {
-    display: none !important;
-}
 
 /* 确保内容区域占满整个屏幕 */
 .vp-page {
