@@ -80,7 +80,7 @@ body {
 }
 
 /* 隐藏VuePress默认的头部和侧边栏 */
-.vp-navbar,
+ body[class*="index"] .vp-navbar,
 .vp-sidebar {
     display: none !important;
 }
